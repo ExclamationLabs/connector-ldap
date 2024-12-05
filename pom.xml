@@ -24,7 +24,7 @@
         <version>1.5.1.3</version>
     </parent>
 
-    <groupId>com.exclamationlabs.polygon.connector</groupId>
+    <groupId>com.exclamationlabs.polygon</groupId>
     <artifactId>connector-ldap</artifactId>
     <!--<version>3.7</version>-->
     <version>${revision}${changelist}</version>

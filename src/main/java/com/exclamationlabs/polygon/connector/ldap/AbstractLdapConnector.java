@@ -1489,7 +1489,7 @@ public abstract class AbstractLdapConnector<C extends AbstractLdapConfiguration>
     public void delete(ObjectClass objectClass, Uid uid, OperationOptions options) {
         // Custom Provision IAM check - Only allow deletes for User Objects
         if (!objectClass.is(OBJECT_CLASS_NAME_USER)) {
-            throw new ConnectorException("Delete not supported for object type of " + objectClass.getClass().getName());
+            throw new ConnectorException("Delete not supported for object type of " + objectClass.getObjectClassValue());
         }
 
         Dn dn;
