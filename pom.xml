@@ -15,7 +15,7 @@
   ~ limitations under the License.
   -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -25,7 +25,7 @@
     </parent>
 
     <artifactId>connector-ldap</artifactId>
-    <version>3.9-SNAPSHOT</version>
+    <version>3.10-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>LDAP Connector</name>
@@ -112,12 +112,22 @@
     </build>
 
     <dependencies>
-
+        <!--Vunerability Management -->
+        <dependency>
+            <groupId>org.apache.mina</groupId>
+            <artifactId>mina-core</artifactId>
+            <version>2.2.4</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.directory.api</groupId>
             <artifactId>api-all</artifactId>
             <version>2.1.6</version>
             <exclusions>
+                <!--Vunerability Management -->
+                <exclusion>
+                    <groupId>org.apache.mina</groupId>
+                    <artifactId>mina-core</artifactId>
+                </exclusion>
                 <!-- Exclude SLF4J API from the lib to avoid bundling it with the
                      connector. The SLF4J is already part of midPoint.
                      If it was also bundled with the connector then we will
