@@ -26,7 +26,7 @@
 
     <groupId>com.exclamationlabs.polygon</groupId>
     <artifactId>elabs-connector-ldap</artifactId>
-    <version>3.8</version>
+    <version>3.7.1</version>
     <packaging>jar</packaging>
 
     <name>LDAP Connector</name>
@@ -48,7 +48,7 @@
     </distributionManagement>
 
     <properties>
-        <revision>3.8</revision>
+        <revision>3.7.1</revision>
         <changelist/>
         <connectorPackage>com.exclamationlabs.polygon.connector.ldap</connectorPackage>
         <connectorClass>LdapConnector</connectorClass>
